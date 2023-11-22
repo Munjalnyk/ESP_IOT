@@ -1,6 +1,6 @@
-# ESP_IOT
+# ESP_IOT_v0.1
 
-## Device connected to SPI.
+## Device connected to SPI
 
 SD card Reader [SD Card Reader](https://robu.in/product/sd-card-reading-writing-module-arduino/)
 
@@ -25,3 +25,9 @@ HW-290/GY-87 10DOF MPU6050 + HMC5883L + BMP180 [HW-290/GY-87 Sensor](https://rob
 |----------|-------|
 | SCL      | 19    |
 | SDA      | 18    |
+
+# Errors
+
+if not flashing from terminal
+
+sudo chown \<yourname\> /dev/ttyUSB0

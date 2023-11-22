@@ -27,6 +27,8 @@ void XSD_write_file(char *path, char *data)
     fclose(f);     
 }
 
+#define CHUNK_SIZE 1024  // Adjust the chunk size as needed
+
 static esp_err_t XSD_read_file(const char *path)
 {
     FILE *f = fopen(path, "r");
@@ -59,12 +61,26 @@ static esp_err_t XSD_read_file(const char *path)
     contents[file_size] = '\0'; // null-terminate the string
     fclose(f);
 
-    XLOG("XSD_read_file", "SD", "Read from file:\n%s", contents);
+    // Split the contents into chunks and log each chunk
+    for (int i = 0; i < file_size; i += CHUNK_SIZE)
+    {
+        int chunk_size = MIN(CHUNK_SIZE, file_size - i);
+        char *chunk = strndup(contents + i, chunk_size);
+        if (chunk != NULL)
+        {
+            XLOG("XSD_read_file", "SD", "%s", chunk);
+            esp_mqtt_client_publish(client, "munjal/out", chunk, 0, 0, 0);
+            free(chunk);
+            vTaskDelay(1000/portTICK_PERIOD_MS);
+        }
+    }
 
     free(contents); // Don't forget to free the allocated memory
 
     return ESP_OK;
 }
+
+
 void XLOGDATA(char *data)
 {
     char *file_LOG1 = MOUNT_POINT "/LOG.txt";

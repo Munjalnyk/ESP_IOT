@@ -1,4 +1,5 @@
 #include "include.h"
+
 #include "XSD.h"
 #define CLIENT_ID "munjal"
 #define ENDPOINT "mqtts://hdf38a02.ala.us-east-1.emqxsl.com"
@@ -97,7 +98,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         cJSON *start_log = cJSON_GetObjectItemCaseSensitive(root, "start_log");
         if (cJSON_IsString(start_log) && strcmp(start_log->valuestring, "1") == 0)
         {
-            printf("Hey its working\n");
             XSD_read_file("/sdcard/LOG.txt");
         }
        
