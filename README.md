@@ -1,10 +1,8 @@
 # ESP_IOT
 
-<base target="_blank">
+## Device connected to SPI.
 
-## Device connected to SPI
-
-SD card Reader [SD Card Reader](https://robu.in/product/sd-card-reading-writing-module-arduino/){:target="_blank"}
+SD card Reader [SD Card Reader](https://robu.in/product/sd-card-reading-writing-module-arduino/)
 
 ## SPI pins
 
@@ -17,9 +15,9 @@ SD card Reader [SD Card Reader](https://robu.in/product/sd-card-reading-writing-
 
 ## Device Connected to I2C
 
-DS3231 RTC Module [RTC Clock](https://robu.in/product/ds3231-rtc-module-precise-real-time-clock-i2c-at24c32/){:target="_blank"}
+DS3231 RTC Module [RTC Clock](https://external.ink?to=/https://robu.in/product/ds3231-rtc-module-precise-real-time-clock-i2c-at24c32/)
 
-HW-290/GY-87 10DOF MPU6050 + HMC5883L + BMP180 [HW-290/GY-87 Sensor](https://robu.in/product/mpu6050hmc5883lbmp180-10dof-3-axis-gyro-3-axis-acceleration-3-axis-magnetic-field-air-pres/){:target="_blank"}
+HW-290/GY-87 10DOF MPU6050 + HMC5883L + BMP180 [HW-290/GY-87 Sensor](https://robu.in/product/mpu6050hmc5883lbmp180-10dof-3-axis-gyro-3-axis-acceleration-3-axis-magnetic-field-air-pres/)
 
 ## I2C Pins
 
