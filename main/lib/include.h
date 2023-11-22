@@ -1,18 +1,11 @@
 #ifndef _INCLUDES_H 
 #define _INCLUDES_H
 
-<<<<<<< Updated upstream
-#include <time.h>
-#include "esp_sntp.h"
-#include "esp_http_server.h"
-// this is dev branch....
-=======
 
 #include <time.h>
 #include "esp_sntp.h"
 #include "esp_http_server.h"
 #include "driver/i2c.h"
->>>>>>> Stashed changes
 #include <string.h>
 #include <sys/unistd.h>
 #include <sys/stat.h>
