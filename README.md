@@ -16,6 +16,10 @@ This repository is a template, and it can be adjusted as per project needs. It h
 
 - To integrate DS3231 RTC Module for timekeeping when powered off or Wi-Fi is not available, as time is used to log data.
 - To integrate HW-290/GY-87 10DOF module consisting of MPU6050 + HMC5883L + BMP180 sensor for project-specific needs.
+- To add webserver for logs and other needs, webserver need to be working on websocket for realtime update.
+- To add OTA feature for Remote upgrade.
+- To add connection for sql database for webpage user authentication.
+- To add GSM and GPRS module if wifi is not available and GPRS to get location as project need.
 
 ## Devices connected to SPI
 
