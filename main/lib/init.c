@@ -1,4 +1,6 @@
 #include "include.h"
+
+
 SemaphoreHandle_t xSemaphore;
 int wificonn;
 void Xinitialise_wifi();
@@ -8,6 +10,9 @@ void wifi_sta(char *ssid, char *pass, int timeout);
 void XLOG(char *function, char *location, const char *format, ...);
 void initialize_spi();
 void XSD_INIT();
+void XgetClock();
+void XsetTime();
+void XRTCINIT();
 void mqtt_app_start(void);
 void XINIT()
 {
@@ -23,6 +28,7 @@ void XINIT()
       printf("Semaphore creation successful.\n");
    }
    XSD_INIT();
+
    XNVS_INIT();
    XLOG("XINIT", "SD", "NVS initialised");
    Xinitialise_wifi();
@@ -31,6 +37,7 @@ void XINIT()
    if(wificonn == 1)
    {
    Set_SystemTime_SNTP();
+   XsetTime();
    mqtt_app_start();
    }
 

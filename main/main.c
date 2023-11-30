@@ -2,6 +2,7 @@
 
 void app_main(void)
 {
+    XRTCINIT();
     esp_log_level_set("uart", ESP_LOG_NONE);
     XLOG("APP_MAIN", "SD", "APP_MAIN Started");
     XINIT();

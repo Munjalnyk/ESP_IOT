@@ -63,7 +63,12 @@
 #include "xmqtt.c"
 #include "XSD.c"
 #include "XSD.h"
-
+#include "ds3231.c"
+#include "ds3231.h"
+#include "i2cdev.h"
+#include "i2cdev.c"
+#include "Xds3231.c"
+#include "Xds3231.h"
 // #include "GSM_Drv.h"
 // #include "PinConfig.h"
 // #include "main.h"
